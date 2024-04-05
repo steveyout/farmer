@@ -1,0 +1,242 @@
+body {
+    padding:1.5em;
+    background: #f5f5f5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+table {
+    border: 1px #a39485 solid;
+    font-size: .9em;
+    box-shadow: 0 2px 5px rgba(0,0,0,.25);
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th {
+    text-align: left;
+}
+
+thead {
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(#3CB371,#2E8B57, #006400);
+}
+
+td, th {
+    padding: 1em .5em;
+    vertical-align: middle;
+}
+
+td {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    background: #fff;
+}
+
+a {
+    color: #73685d;
+}
+
+@media all and (max-width: 768px) {
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        text-align: right;
+    }
+
+    table {
+        position: relative;
+        padding-bottom: 0;
+        border: none;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+    }
+
+    thead {
+        float: left;
+        white-space: nowrap;
+    }
+
+    tbody {
+        overflow-x: auto;
+        overflow-y: hidden;
+        position: relative;
+        white-space: nowrap;
+    }
+
+    tr {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    th {
+        border-bottom: 1px solid #a39485;
+    }
+
+    td {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+
+}
+
+.chip{
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.25);
+    margin: 0 10px;
+
+    cursor: pointer;
+}
+
+.chip.primary{
+    background: #00DFC8;
+    color: whitesmoke;
+}
+
+.chip.secondary{
+    background: #242933;
+    color: #777;
+}
+
+.chip.warning{
+    background:#FEB904;
+    color: whitesmoke;
+}
+.chip.danger{
+    background: #FF0000;
+    color: whitesmoke;
+}
+
+.chip.info{
+    background: #5FD6D4;
+    color: whitesmoke;
+}
+
+.chip-avatar{
+    border-radius: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.chip-avatar img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+}
+
+.chip-avatar label{
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.btn{
+    width: 5cm;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 14px;
+}
+
+.btn-success{
+    color: white;
+    background-color: green;
+}
+
+
+.modal-window {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.25);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+.modal-window:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-window > div {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: white;
+}
+.modal-window header {
+    font-weight: bold;
+}
+.modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+}
+
+.modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+}
+.modal-close:hover {
+    color: black;
+}
+
+/* Demo Styles */
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.modal-window > div {
+    border-radius: 1rem;
+}
+
+.modal-window div:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+.logo {
+    max-width: 150px;
+    display: block;
+}
+
+small {
+    color: lightgray;
+}
+
